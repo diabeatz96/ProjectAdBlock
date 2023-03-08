@@ -7,8 +7,8 @@ const root = createRoot(container); // createRoot(container!) if you use
 const App = () => {
   console.log("ADAM IS HERE")
   return (
-    <div>
-      <h1 className="container">Hello from My Extension!</h1>
+    <div className="container">
+      <h1>Hello from My Extension!</h1>
     </div>
   );
 };

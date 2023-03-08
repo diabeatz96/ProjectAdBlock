@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require("path");
 
 module.exports = {
@@ -20,7 +21,8 @@ module.exports = {
           },
         },
       },
-      { test: /\.css$/, use: 'css-loader' },
+      { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, // instead of style-loader
+      'css-loader' ] },
     ],
   },
   devtool: 'cheap-module-source-map',
@@ -32,5 +34,6 @@ module.exports = {
     new CopyWebpackPlugin({
         patterns: [{ from: "./public/manifest.json", to: "./" }],
       }),
+    new MiniCssExtractPlugin(),
   ]
 };
