@@ -1,6 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import "./global.css"
+import { createRoot } from 'react-dom/client';
+import React from "react";
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use 
 
 const App = () => {
   console.log("ADAM IS HERE")
@@ -11,4 +13,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+root.render(<App tab="home" />);
