@@ -20,6 +20,7 @@ module.exports = {
           },
         },
       },
+      { test: /\.css$/, use: 'css-loader' },
     ],
   },
   devtool: 'cheap-module-source-map',
