@@ -8,7 +8,7 @@ const App = () => {
   console.log("ADAM IS HERE")
   return (
     <div className="container">
-      <h1>Hello from My Extension!</h1>
+      <h1>Hello from Conor!</h1>
     </div>
   );
 };
