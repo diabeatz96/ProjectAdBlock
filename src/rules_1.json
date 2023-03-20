@@ -1,0 +1,27 @@
+[
+    {
+      "id" : 1,
+      "priority": 1,
+      "action" : { "type" : "block" },
+      "condition" : {
+        "urlFilter" : "||example.com",
+        "resourceTypes" : ["main_frame"]
+      }
+    } , 
+    {
+      "id" : 2,
+      "priority": 1,
+      "action" : { "type" : "block" },
+      "condition" : {
+        "urlFilter" : "||securepubads.g.doubleclick.net"
+      }
+    },
+    {
+      "id" : 3,
+      "priority": 1,
+      "action" : { "type" : "block" },
+      "condition" : {
+        "urlFilter" : "||googleads4.g.doubleclick.net"
+      }
+    }
+  ]
