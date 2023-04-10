@@ -12,17 +12,24 @@
       "activeTab",
       "background",
       "scripting",
+      "storage",
       "declarativeNetRequest",
-      "declarativeNetRequestFeedback"
+      "declarativeNetRequestFeedback" 
     ],
+    "icons": { 
+    "48":  "icons/off.png",
+    "128":  "icons/on.png"
+     },
     "background": {
       "service_worker": "killer.js"
     },
+    "options_page": "options.html",
     "version": "1.0",
     "manifest_version": 3,
     "description": "A simple Chrome extension",
     "action": {
-      "default_popup": "index.html"
+      "default_popup": "index.html",
+      "default_icon": "icons/on.png"
     }
   }
 

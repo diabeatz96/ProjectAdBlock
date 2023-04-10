@@ -4,6 +4,8 @@ import { createRoot } from 'react-dom/client';
 import React from "react";
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use 
+ 
+
 
 const Button = () => {
   return (
@@ -30,7 +32,7 @@ const App = () => {
     <div className="container">
       <h1>Project Ad Blocker</h1>
       <Toggle/>
-      <p> This was created by Adam Kostandy and Conor Farrell</p>
+      <p> This was created by Adam Kostandy and Conor Farrell </p>
     </div>
   );
 };

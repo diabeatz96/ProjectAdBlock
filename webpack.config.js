@@ -13,6 +13,7 @@ module.exports = {
     filename: '[name].js',
     path: __dirname + "/dist"
   },
+  watch: true,
   module: {
     rules: [
       {
@@ -27,6 +28,13 @@ module.exports = {
       },
       { test: /\.css$/, use: [ MiniCssExtractPlugin.loader, // instead of style-loader
       'css-loader' ] },
+      {
+        test: /\.(png|jpg)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'icons/[name][ext]'
+        }
+     }
     ],
   },
   devtool: 'cheap-module-source-map',
@@ -34,6 +42,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./public/index.html",
       filename: "./index.html"
+    }),
+    new HtmlWebPackPlugin({
+      template: './public/options.html',
+      filename: './options.html',
     }),
     new CopyWebpackPlugin({
         patterns: [{ from: "./src/manifest.json", to: "./" }, {from :"./src/rules_1.json", to: "./"}],
