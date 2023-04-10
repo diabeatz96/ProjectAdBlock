@@ -32,4 +32,89 @@ chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((e) => {
   console.log(msg);
 });
 
+// create asynce function to return data from promise
+function test() {
+  return chrome.declarativeNetRequest.getDynamicRules();
+}
+
+const testValid = async() => {
+  let result = test();
+   return result;
+}
+
+
 console.log('Service worker started.');
+
+chrome.declarativeNetRequest.getDynamicRules((rules) => {
+  return rules;
+});
+
+function removeRuleIds(ruleIds) {
+  chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: ruleIds,
+    addRules: [],
+  });
+}
+
+function removeallRules() {
+  chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: [],
+    addRules: [],
+  });
+}
+
+const existingRules = chrome.declarativeNetRequest.getDynamicRules((rules) => {
+  console.log(rules);
+  return rules;
+});
+
+function deleteRules() {
+  removeRuleIds(existingRules);
+}
+
+function addRule(rule) {
+  chrome.declarativeNetRequest.updateDynamicRules({
+    removeRuleIds: [],
+    addRules: [rule],
+});
+}
+
+function getStaticRuleCount() {
+  return chrome.declarativeNetRequest.getAvailableStaticRuleCount().data;
+}
+
+function generateUniqueRuleId() {
+  return Math.floor(Math.random() * 1000000000);
+}
+   
+chrome.declarativeNetRequest.updateDynamicRules({
+  removeRuleIds: [], // remove existing rules
+  // add unique rule id to each rule
+  addRules: [
+    {
+      id: generateUniqueRuleId(),
+      priority: 1,
+      action: {type: 'block'},
+      condition: {
+        urlFilter: 'facebook.com',
+        resourceTypes: ['main_frame'],
+      },
+    },
+  ],
+} , () => {
+
+  if (chrome.runtime.lastError) {
+    console.error(chrome.runtime.lastError.message);
+  }
+
+  async function test2  () {
+    return await test;
+  }
+
+  removeallRules();
+  console.log(test());
+  // return data from promise 
+
+  
+  console.log('Rules added successfully.');
+});
