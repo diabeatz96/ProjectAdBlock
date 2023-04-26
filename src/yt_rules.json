@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 887985294,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" : {
+            "urlFilter" : "generate_204",
+            "domains" : "youtube.com",
+            "resourceTypes" : ["other"]
+        }
+    },
+    {
+        "id" : 547772123,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" : {
+            "urlFilter" : "https://www.youtube.com/api/stats/qoe"
+        }
+    }
+
+]

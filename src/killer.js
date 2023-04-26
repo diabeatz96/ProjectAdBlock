@@ -86,18 +86,22 @@ function getStaticRuleCount() {
 function generateUniqueRuleId() {
   return Math.floor(Math.random() * 1000000000);
 }
-   
+
+
 chrome.declarativeNetRequest.updateDynamicRules({
-  removeRuleIds: [], // remove existing rules
-  // add unique rule id to each rule
+  
+  removeRuleIds: [351487780,9612718], // remove existing rules
+  //add unique rule id to each rule
   addRules: [
     {
       id: generateUniqueRuleId(),
       priority: 1,
       action: {type: 'block'},
       condition: {
-        urlFilter: 'facebook.com',
-        resourceTypes: ['main_frame'],
+        urlFilter: ''
+        ,
+        domains : ['youtube.com'],
+        //resourceTypes: ['xhr'],
       },
     },
   ],
