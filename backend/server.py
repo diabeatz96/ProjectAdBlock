@@ -1,8 +1,16 @@
 from flask import Flask
+from flask_restful import Api, Resource
 
 app = Flask(__name__)
+api = Api(app)
 
 @app.route("/members")
+
+class ML(Resource):
+    def get(self):
+        return {"data" : "Hello World"}
+    
+api.add_resource(ML,"/machine")
 
 def members():
     return {"members": ['Member1','Member2',"Member3"]}

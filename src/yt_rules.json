@@ -16,6 +16,94 @@
         "condition" : {
             "urlFilter" : "https://www.youtube.com/api/stats/qoe"
         }
+    },
+    {
+        "id": 51069437,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/ptracking"
+        }
+    },
+    {
+        "id": 690287512,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/pagead"
+        }
+    },
+    {
+        "id": 528507777,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/api/stats/watchtime"
+        }
+    },
+    {
+        "id": 924492531,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/youtubei/v1/log_event"
+        }
+    },
+    {
+        "id":  937072474,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://securepubads.g.doubleclick.net"
+        }
+    },
+    {
+        "id":  578385699,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/api"
+        }
+    },
+    {
+        "id":  578385699,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "https://www.youtube.com/api"
+        }
+    },
+    {
+        "id":  355469504,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "doubleclick.net"
+        }
+    },
+    {
+        "id":  324558220,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "generate_204?conn2"
+        }
+    },
+    {
+        "id":  424799742,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "gstatic.com"
+        }
+    },
+    {
+        "id":  71750470,
+        "priority" : 1,
+        "action" : {"type" : "block"},
+        "condition" :{
+            "urlFilter" : "content.googleapis.com"
+        }
     }
 
 ]

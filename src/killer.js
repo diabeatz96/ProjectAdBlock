@@ -90,7 +90,7 @@ function generateUniqueRuleId() {
 
 chrome.declarativeNetRequest.updateDynamicRules({
   
-  removeRuleIds: [351487780,9612718], // remove existing rules
+  removeRuleIds: [426163256,666583144], // remove existing rules
   //add unique rule id to each rule
   addRules: [
     {
@@ -98,9 +98,9 @@ chrome.declarativeNetRequest.updateDynamicRules({
       priority: 1,
       action: {type: 'block'},
       condition: {
-        urlFilter: ''
+        urlFilter: 'doubleclick.net'
         ,
-        domains : ['youtube.com'],
+        //domains : ['youtube.com'],
         //resourceTypes: ['xhr'],
       },
     },

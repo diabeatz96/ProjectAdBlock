@@ -12,6 +12,7 @@ node_modules/
 # Build
 dist/
 build/
+backend/
 
 # Misc
 .DS_Store
